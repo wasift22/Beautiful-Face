@@ -2,7 +2,7 @@ const products = [
     { id: 1, name: "Beautiful hand & body-lotion",category: "cream", price: 45, oldPrice: 60, image: "photos/black-botol-hand&body-lotion.jpg", rating: 4, reviews: 120, description: "Apni asli tafseel yahan likhein."},
     { id: 2, name: "Dark Spot Diminishing Cream",category: "cream", price: 35, oldPrice: 55, image: "photos/kojie.san-face-lightining-cream.jpg", rating: 4, reviews: 190, description: "Apni asli tafseel yahan likhein."},
     { id: 3, name: "Night Repair Brightening Cream", category: "cream", price: 25, oldPrice: 38, image: "photos/goree-beauty-cream.jpg", rating: 5, reviews: 175, description: "Apni asli tafseel yahan likhein." },
-    { id: 4, name: "Exfoliating Body Scrub",category: "scrub", price: 40, oldPrice: 55, image: "pictures/44.jpeg", rating: 4, reviews: 210, description: "Apni asli tafseel yahan likhein."},
+    { id: 4, name: "Exfoliating Body Scrub",category: "scrub", price: 40, oldPrice: 55, image: "photos/globalstar-face&body-scrub.jpg", rating: 4, reviews: 210, description: "Apni asli tafseel yahan likhein."},
     { id: 5, name: "Whitning Body Lotion", category: "scrub", price: 50, oldPrice: 65, image: "photos/kojie.acid-body-lotion.jpg", rating: 4, reviews: 140, description: "Apni asli tafseel yahan likhein."},
     { id: 6, name: "Shower Gel For Smooth Body", category: "scrub", price: 40, oldPrice: 0,  image: "photos/shower-gel-blue.jpg", rating: 4, reviews: 160, description: "Apni asli tafseel yahan likhein." },
     { id: 7, name: "Stain Smooth Perfumed Lotion Vitamin A-C-E",     category: "cream", price: 60, oldPrice: 70, image: "photos/stain-smooth-perfumed-lotin-vitamin-A-C-D.jpg", rating: 5, reviews: 110, description: "Apni asli tafseel yahan likhein." },
