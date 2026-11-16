@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Buy whitening cream and body scrub." />
+    <title>Beautiful Face | Home</title>
+    <link rel="icon" href="photos/logo.jpeg" />
+    <meta name="theme-color" content="#b83a6b" />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Beautiful Face | Skin Care in Riyadh" />
+    <meta
+      property="og:description"
+      content="Whitening cream, body scrub and hair care. Free delivery in Riyadh and Cash on Delivery."
+    />
+    <meta
+      property="og:image"
+      content="https://wasift22.github.io/saudiproperty/pictures/hero.jpeg"
+    />
+    <meta
+      property="og:url"
+      content="https://wasift22.github.io/saudiproperty/"
+    />
+  </head>
+  <body>
+    <div class="top-bar">Delivery on time in Riyadh as soon as possible</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="photos/logo.jpeg" alt="Beautiful Face" />
+          <span>Beautiful</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <form class="search-box" action="shop.html">
+          <input
+            type="search"
+            name="q"
+            list="product-names"
+            placeholder="Search for products"
+            aria-label="Search"
+          />
+          <datalist id="product-names">
+            <option value="Tone-Up Whitening Cream"></option>
+            <option value="Dark Spot Diminishing Cream"></option>
+            <option value="Night Repair Brightening Cream"></option>
+            <option value="Exfoliating Body Scrub"></option>
+            <option value="Coffee & Cocoa Firming Scrub"></option>
+            <option value="Brightening Walnut"></option>
+            <option value="Barrier Repair Moisturizer"></option>
+            <option value="Anti-Aging & Firming Cream"></option>
+            <option value="Hair Fall Oil"></option>
+          </datalist>
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html" class="cart-link"
+            >🛒 <span class="cart-count">0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <nav class="category-bar">
+      <div class="container category-inner">
+        <a href="shop.html">All Products</a>
+        <a href="shop.html?q=tone">Tone-Up Whitening Cream</a>
+        <a href="shop.html?q=dark%20spot">Dark Spot Diminishing Cream</a>
+        <a href="shop.html?q=night">Night Repair Brightening Cream</a>
+        <a href="shop.html?q=exfoliating">Exfoliating Body Scrub</a>
+        <a href="shop.html?q=coffee">Coffee &amp; Cocoa Firming Scrub</a>
+        <a href="shop.html?q=walnut">Brightening Walnut</a>
+        <a href="shop.html?q=barrier">Barrier Repair Moisturizer</a>
+        <a href="shop.html?q=anti-aging">Anti-Aging &amp; Firming Cream</a>
+        <a href="shop.html?q=hair">Hair Fall Oil</a>
+        <a href="shop.html?cat=offers">Offers</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Glow With Confidence</h1>
+          <p>Whitening cream and body scrub, Free Delivery in Riyadh.</p>
+          <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container features-inner">
+          <div class="feature">
+            <strong>🚚 Delivery On Time</strong>
+            <span>Riyadh within 10 hours</span>
+          </div>
+          <div class="feature">
+            <strong>💵 Cash on Delivery</strong>
+            <span>Pay when you receive</span>
+          </div>
+          <div class="feature">
+            <strong>✅ Original Products</strong>
+            <span>100% genuine</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="urgent">
+        <div class="container urgent-inner">
+          <div class="urgent-text">
+            <h2>⚡ Urgent Delivery Available</h2>
+            <p>We have urgent delivery option. Connect with us on WhatsApp.</p>
+          </div>
+          <!-- <a href="https://wa.me/966576756048?text=Hello%2C%20I%20need%20urgent%20delivery"
+             class="btn btn-whatsapp" target="_blank" rel="noopener">
+            💬 Chat on WhatsApp
+          </a> -->
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Our Products</h2>
+          <div class="products" id="product-list"></div>
+        </div>
+      </section>
+
+      <section class="section reviews">
+        <div class="container">
+          <h2 class="section-title">What Our Customers Say</h2>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>Very good quality and fast delivery. I will order again.</p>
+              <strong>Sara A.</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <p>The body scrub smells great and my skin feels soft.</p>
+              <strong>Noor K.</strong>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★☆</div>
+              <p>Good products. Delivery was quick in Riyadh.</p>
+              <strong>Huda M.</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>Beautiful Face</h3>
+          <p>
+            Whitening cream, body scrub and skin care products delivered in
+            Riyadh.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <a href="cart.html">My Cart</a>
+          <a href="contact.html">Contact Us</a>
+          <p>Cash on Delivery available</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>Riyadh, Saudi Arabia</p>
+          <a href="https://wa.me/966576756048" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+        </div>
+
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <a
+            href="https://www.instagram.com/beauityy?srtk=cDZua3hvOWFvZWJ0"
+            target="_blank"
+            rel="noopener"
+            >📸 Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/share/19V7PXWZJG/"
+            target="_blank"
+            rel="noopener"
+            >f Facebook</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Beautiful Face. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/966576756048"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      >💬</a
+    >
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

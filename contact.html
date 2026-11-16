@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Beautiful Face for orders, delivery and any questions."
+    />
+    <title>Contact | Beautiful Face</title>
+    <link rel="icon" href="photos/logo.jpeg" />
+    <meta name="theme-color" content="#b83a6b" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">Free delivery in Riyadh as soon as possible</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="photos/logo.jpeg" alt="Beautiful Face" />
+          <span>Beautiful</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <form class="search-box" action="shop.html">
+          <input
+            type="search"
+            name="q"
+            list="product-names"
+            placeholder="Search for products"
+            aria-label="Search"
+          />
+          <datalist id="product-names">
+            <option value="Tone-Up Whitening Cream"></option>
+            <option value="Dark Spot Diminishing Cream"></option>
+            <option value="Night Repair Brightening Cream"></option>
+            <option value="Exfoliating Body Scrub"></option>
+            <option value="Coffee & Cocoa Firming Scrub"></option>
+            <option value="Brightening Walnut"></option>
+            <option value="Barrier Repair Moisturizer"></option>
+            <option value="Anti-Aging & Firming Cream"></option>
+            <option value="Hair Fall Oil"></option>
+          </datalist>
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+          <a href="cart.html" class="cart-link"
+            >🛒 <span class="cart-count">0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. Title -->
+      <section class="page-title">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>We are happy to help with your order, delivery or any question.</p>
+        </div>
+      </section>
+
+      <!-- 2. Quick info cards -->
+      <section class="info-cards">
+        <div class="container info-grid">
+          <a
+            class="info-card"
+            href="https://wa.me/966576756048?text=Hello"
+            target="_blank"
+            rel="noopener"
+          >
+            <div class="info-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <p>Fastest way to reach us</p>
+          </a>
+
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h3>Location</h3>
+            <p>Riyadh, Saudi Arabia</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🕘</div>
+            <h3>Working Hours</h3>
+            <p>24/7:24/7</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🚚</div>
+            <h3>Delivery</h3>
+            <p>Free in Riyadh, urgent option available</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Form + side box -->
+      <section class="section">
+        <div class="container contact-layout">
+          <form
+            class="checkout-form"
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="post"
+          >
+            <h2>Send Us a Message</h2>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="reason">Reason</label>
+              <select id="reason" name="reason">
+                <option>Order question</option>
+                <option>Delivery</option>
+                <option>Product advice</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-full">Send Message</button>
+              <button
+                type="button"
+                id="send-whatsapp"
+                class="btn btn-full btn-whatsapp"
+              >
+                💬 Send on WhatsApp
+              </button>
+            </div>
+          </form>
+
+          <aside class="summary">
+            <h2>Need It Urgently?</h2>
+            <p class="side-text">
+              We have urgent delivery option. Message us on WhatsApp and we will
+              reply as soon as possible.
+            </p>
+            <a
+              href="https://wa.me/966576756048?text=Hello%2C%20I%20need%20urgent%20delivery"
+              class="btn btn-full btn-whatsapp"
+              target="_blank"
+              rel="noopener"
+            >
+              💬 Chat on WhatsApp
+            </a>
+
+            <h3 class="side-heading">Follow Us</h3>
+            <a
+              href="https://www.instagram.com/beauityy?srtk=cDZua3hvOWFvZWJ0"
+              class="side-link"
+              target="_blank"
+              rel="noopener"
+              >📸 Instagram</a
+            >
+            <a
+              href="https://www.facebook.com/share/19V7PXWZJG/"
+              class="side-link"
+              target="_blank"
+              rel="noopener"
+              >f Facebook</a
+            >
+          </aside>
+        </div>
+      </section>
+
+      <!-- 4. Map -->
+      <section class="map-section">
+        <div class="container">
+          <h2 class="section-title">Find Us</h2>
+          <div class="map-box">
+            <iframe
+              title="Our location in Riyadh"
+              src="https://www.google.com/maps?q=Riyadh%2C%20Saudi%20Arabia&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. FAQ -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+
+          <div class="faq-list">
+            <details>
+              <summary>How can I place an order?</summary>
+              <p>
+                Add products to your cart, then go to checkout, or send your
+                cart to us on WhatsApp.
+              </p>
+            </details>
+
+            <details>
+              <summary>Is delivery free?</summary>
+              <p>
+                Yes, delivery is free in Riyadh if you want to urgent delivery
+                you should pay cash.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do you have urgent delivery?</summary>
+              <p>Yes. Please message us on WhatsApp and we will arrange it.</p>
+            </details>
+
+            <details>
+              <summary>Can I pay when I receive the order?</summary>
+              <p>Yes, Cash on Delivery is available.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>Beautiful Face</h3>
+          <p>
+            Whitening cream, body scrub and skin care products delivered in
+            Riyadh.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <a href="cart.html">My Cart</a>
+          <a href="contact.html">Contact Us</a>
+          <p>Cash on Delivery available</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>Riyadh, Saudi Arabia</p>
+          <a href="https://wa.me/966576756048" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+        </div>
+
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <a
+            href="https://www.instagram.com/beauityy?srtk=cDZua3hvOWFvZWJ0"
+            target="_blank"
+            rel="noopener"
+            >📸 Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/share/19V7PXWZJG/"
+            target="_blank"
+            rel="noopener"
+            >f Facebook</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Beautiful Face. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/966576756048"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      >💬</a
+    >
+
+    <script src="script.js"></script>
+  </body>
+</html>

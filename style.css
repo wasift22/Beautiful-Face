@@ -1,0 +1,1306 @@
+/* ==========================
+   1. VARIABLES
+   ========================== */
+:root {
+    --primary: #b83a6b;
+    --accent: #f0c27b;
+    --dark: #222;
+    --light: #fff5f7;
+    --white: #fff;
+    --radius: 10px;
+    --space: 20px;
+}
+
+/* ==========================
+   2. RESET
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   3. BASE
+   ========================== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* JavaScript se chhupai hui cheez hamesha chhupi rahe */
+[hidden] {
+    display: none !important;
+}
+
+/* ==========================
+   4. LAYOUT
+   ========================== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 60px 0;
+    background-color: #fde8ef;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.center-text {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+/* ==========================
+   5. BUTTONS
+   ========================== */
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+button.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff;
+}
+
+/* ==========================
+   6. TOP BAR
+   ========================== */
+.top-bar {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+/* ==========================
+   7. HEADER
+   ========================== */
+.site-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Hamburger button */
+.menu-toggle {
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-size: 22px;
+    padding: 2px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Search box */
+.search-box {
+    order: 3;
+    width: 100%;
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--primary);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Menu (phone par band, button se khulta hai) */
+.nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    order: 4;
+}
+
+.nav.open {
+    display: flex;
+}
+
+.nav a {
+    transition: 0.3s;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--primary);
+}
+
+/* Cart icon aur number */
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-count {
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================
+   8. CATEGORY BAR
+   ========================== */
+.category-bar {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+}
+
+.category-inner {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.category-inner a {
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.category-inner a:hover {
+    color: var(--primary);
+}
+
+/* ==========================
+   9. HERO AUR PAGE TITLE
+   ========================== */
+.hero {
+    background-color: var(--primary);
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("pictures/hero.jpeg");
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero .btn {
+    background-color: var(--accent);
+    color: var(--dark);
+    font-weight: bold;
+    padding: 14px 32px;
+}
+
+.page-title {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* ==========================
+   10. FEATURES AUR URGENT
+   ========================== */
+.features {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.features-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+}
+
+.feature strong {
+    display: block;
+}
+
+.feature span {
+    font-size: 14px;
+    color: #666;
+}
+
+.urgent {
+    background-color: #e8f8ef;
+    border-top: 1px solid #c9ecd8;
+    border-bottom: 1px solid #c9ecd8;
+    padding: 25px 0;
+}
+
+.urgent-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.urgent-text h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.urgent .btn {
+    padding: 8px 18px;
+    font-size: 14px;
+}
+
+.cta {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+.cta .btn {
+    background-color: var(--accent);
+    color: var(--dark);
+    font-weight: bold;
+}
+
+/* ==========================
+   11. PRODUCTS
+   ========================== */
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space);
+}
+
+.product-card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info .btn {
+    display: block;
+    width: 100%;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e53935;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.stars {
+    color: #f5a623;
+}
+
+.review-count {
+    color: #777;
+}
+
+.price-row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.price {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.price-row .price {
+    font-size: 20px;
+}
+
+.old-price {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ==========================
+   SHOP TOOLBAR (filter aur sort)
+   ========================== */
+.shop-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 15px;
+}
+
+.filter-chips {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.chip {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.chip:hover {
+    background-color: var(--light);
+}
+
+.chip.active {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-box label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sort-box select {
+    flex: 1;
+    padding: 8px 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: var(--white);
+}
+
+.result-count {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+}
+
+
+/* ==========================
+   PRODUCT DETAIL PAGE
+   ========================== */
+.product-card h3 a:hover {
+    color: var(--primary);
+}
+
+.crumb-bar {
+    background-color: var(--white);
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #666;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.detail-image {
+    position: relative;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: var(--radius);
+}
+
+.detail-category {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detail-info h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 4px 0 8px;
+}
+
+.detail-info .rating {
+    justify-content: flex-start;
+}
+
+.detail-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.detail-price .price {
+    font-size: 28px;
+    margin: 0;
+}
+
+.save-text {
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.detail-desc {
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.detail-points {
+    list-style: none;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #444;
+}
+
+.detail-points li {
+    margin-bottom: 4px;
+}
+
+.detail-buy {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.detail-buy .btn {
+    flex: 1;
+    text-align: center;
+}
+
+.related {
+    background-color: var(--white);
+    padding: 50px 0;
+}
+
+/* ==========================
+   12. CUSTOMER REVIEWS
+   ========================== */
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space);
+}
+
+.review-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.review-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+/* ==========================
+   13. CART PAGE
+   ========================== */
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.steps span {
+    opacity: 0.6;
+}
+
+.steps .current {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.cart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cart-head h2 {
+    font-size: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 15px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-details {
+    flex: 1;
+    min-width: 140px;
+}
+
+.cart-item strong {
+    min-width: 80px;
+    text-align: right;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty button {
+    width: 32px;
+    height: 32px;
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.remove {
+    background: none;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+}
+
+.back-link {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Khali cart */
+.empty-cart {
+    background-color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.empty-icon {
+    font-size: 48px;
+}
+
+.empty-cart h3 {
+    margin: 10px 0 5px;
+}
+
+.empty-cart p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.cart-layout.cart-empty {
+    grid-template-columns: 1fr;
+}
+
+/* Order summary */
+.summary {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    height: fit-content;
+}
+
+.summary h2 {
+    margin-bottom: 15px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-total {
+    border-top: 2px solid #eee;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.summary-actions .btn {
+    margin-top: 10px;
+}
+
+.summary-note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+
+/* ==========================
+   14. CHECKOUT AUR FORMS
+   ========================== */
+.checkout-form {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.checkout-form h2 {
+    margin: 10px 0 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.radio-option {
+    display: block;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.thanks {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.thanks p {
+    margin: 15px 0 25px;
+}
+
+.thanks-icon {
+    font-size: 56px;
+    margin-bottom: 5px;
+}
+
+.thanks h2 {
+    margin-bottom: 5px;
+}
+
+.thanks-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ==========================
+   CONTACT PAGE
+   ========================== */
+.page-title p {
+    margin-top: 8px;
+    opacity: 0.9;
+}
+
+/* Rabta ke cards */
+.info-cards {
+    background-color: var(--white);
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.info-card {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    font-size: 30px;
+}
+
+.info-card h3 {
+    margin: 8px 0 4px;
+    font-size: 17px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Form aur side box */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: var(--white);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-actions .btn {
+    margin-top: 10px;
+}
+
+.side-text {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.side-heading {
+    margin: 25px 0 10px;
+}
+
+.side-link {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Map */
+.map-section {
+    background-color: var(--white);
+    padding: 50px 0;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: var(--radius);
+}
+
+/* FAQ */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-list details {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    padding: 14px 18px;
+    margin-bottom: 10px;
+}
+
+.faq-list summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-list details p {
+    margin-top: 10px;
+    color: #555;
+}
+
+
+/* ==========================
+   ABOUT PAGE
+   ========================== */
+.about-story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.about-text .btn {
+    margin-top: 10px;
+}
+
+.about-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Numbers ki patti */
+.stats-bar {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 35px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.stat span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Hum kyun */
+.about-why {
+    background-color: var(--white);
+    padding: 50px 0;
+}
+
+/* Hum kaise kaam karte hain */
+.how-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space);
+}
+
+.how-card {
+    background-color: var(--white);
+    padding: 25px 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.how-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.how-card h3 {
+    margin-bottom: 6px;
+}
+
+.how-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* ==========================
+   15. FOOTER
+   ========================== */
+.site-footer {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 40px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.footer-col h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.footer-col a,
+.footer-col p {
+    display: block;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 6px;
+}
+
+.footer-col a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #444;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ==========================
+   16. FLOATING WHATSAPP
+   ========================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 46px;
+    height: 46px;
+    background-color: #25d366;
+    color: var(--white);
+    font-size: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================
+   17. RESPONSIVE (hamesha sab se aakhir mein)
+   ========================== */
+@media (min-width: 600px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {
+        padding: 120px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .cart-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .search-box {
+        order: 0;
+        width: auto;
+        flex: 1;
+        max-width: 500px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        order: 0;
+        gap: 20px;
+    }
+
+    .nav a {
+        padding: 0;
+        border-top: none;
+    }
+
+    .features-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .urgent-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+        .shop-toolbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sort-box select {
+        flex: none;
+    }
+
+        .detail-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+    }
+
+    .detail-image img {
+        height: 440px;
+    }
+}
