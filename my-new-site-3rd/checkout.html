@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Complete your order with Cash on Delivery."
+    />
+    <title>Checkout | Beautiful Face</title>
+    <link rel="icon" href="photos/logo.jpeg" />
+    <meta name="theme-color" content="#b83a6b" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">Free delivery in Riyadh as soon as possible</div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <img src="photos/logo.jpeg" alt="Beautiful Face" />
+          <span>Beautiful</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <form class="search-box" action="shop.html">
+          <input
+            type="search"
+            name="q"
+            placeholder="Search for products"
+            aria-label="Search"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="cart.html" class="cart-link"
+            >🛒 <span class="cart-count">0</span></a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-title">
+        <div class="container">
+          <h1>Checkout</h1>
+          <div class="steps">
+            <span>1. Cart</span>
+            <span>›</span>
+            <span class="current">2. Checkout</span>
+            <span>›</span>
+            <span>3. Done</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container cart-layout">
+          <!-- Left: delivery form -->
+          <form
+            class="checkout-form"
+            id="checkout-form"
+            action="https://formspree.io/f/mrpqeywa"
+            method="post"
+          >
+            <input type="hidden" name="source" value="Checkout order" />
+
+            <h2>Delivery Details</h2>
+
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                value="Riyadh"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Full Address</label>
+              <textarea
+                id="address"
+                name="address"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <h2>Payment Method</h2>
+
+            <label class="radio-option">
+              <input
+                type="radio"
+                name="payment"
+                value="Cash on Delivery"
+                checked
+              />
+              Cash on Delivery
+            </label>
+
+            <label class="radio-option">
+              <input type="radio" name="payment" value="Card" disabled />
+              Card Payment (coming soon)
+            </label>
+
+            <button type="submit" id="place-order" class="btn btn-full">
+              Place Order
+            </button>
+            <p class="form-status" id="form-status" role="alert"></p>
+          </form>
+
+          <!-- Right: order summary -->
+          <aside class="summary">
+            <h2>Your Order</h2>
+
+            <div id="order-items"></div>
+
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span id="co-delivery">Free</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total</span>
+              <span id="co-total">SAR 0</span>
+            </div>
+
+            <a href="cart.html" class="back-link">← Edit Cart</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3>Beautiful Face</h3>
+          <p>
+            Whitening cream, body scrub and skin care products delivered in
+            Riyadh.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Customer Service</h3>
+          <a href="cart.html">My Cart</a>
+          <a href="contact.html">Contact Us</a>
+          <p>Cash on Delivery available</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <p>Riyadh, Saudi Arabia</p>
+          <a href="https://wa.me/966576756048" target="_blank" rel="noopener"
+            >WhatsApp</a
+          >
+        </div>
+
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <a
+            href="https://www.instagram.com/beauityy?srtk=cDZua3hvOWFvZWJ0"
+            target="_blank"
+            rel="noopener"
+            >📸 Instagram</a
+          >
+          <a
+            href="https://www.facebook.com/share/19V7PXWZJG/"
+            target="_blank"
+            rel="noopener"
+            >f Facebook</a
+          >
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Beautiful Face. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/966576756048"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      >💬</a
+    >
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
